@@ -17,6 +17,7 @@ const routes =[
         path: '/',
         name: 'Inicio',
         component: Inicio,
+        component:()=> import(/*webpackChunkName:"contacto"*/'../views/Inicio.vue'),
     },
     {
         path:'/home',
@@ -38,17 +39,20 @@ const routes =[
         name: 'SobreMi',
         component: SobreMi,
         alias:['/acerca'],
+        component:()=> import(/*webpackChunkName:"sobremi"*/'../views/SobreMi.vue'),
     },
     {
         path:'/contacto',
         name:'Contacto',
         component: Contacto,
         alias:['/contactame'],
+        component:()=> import(/*webpackChunkName:"sobremi"*/'../views/Contacto.vue'),
     },
     {
         path:'/post/1',
         name:'Articulo',
         component: Articulo,
+        component:()=> import(/*webpackChunkName:"articulo"*/'../views/Articulo.vue'),
     },
     {
         path:'*',
