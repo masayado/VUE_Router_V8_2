@@ -27,7 +27,9 @@
         </div>
     </nav>
     <!-- ROUTER VIEW QUE CARGARÁ LAS VISTAS (INICIO, SOBRE MÍ, CONTACTO, ETC.) -->
+    <transition name="router-anim" mode="out-in">
     <router-view></router-view> 
+    </transition>
   </div>
   
 </template>
@@ -50,5 +52,36 @@ export default {
 }
 #menu-v8 a{
   text-shadow: 1px 1px #000;
+}
+
+.router-anim-enter-active{
+  animation: coming 1s;
+  animation-delay: .5s;
+  opacity:0;
+}
+
+.router-anim-leave-active{
+  animation: going 1s;
+}
+
+@keyframes coming{
+  from{
+    transform:translateX(-50px);
+    opacity:0;
+  }
+  to{
+    transform:translateX(0px);
+    opacity:1;
+  }
+}
+
+@keyframes going{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform:translateX(-50px);
+    opacity:0;
+  }
 }
 </style>
