@@ -19,6 +19,21 @@ const routes =[
         component: Inicio,
     },
     {
+        path:'/home',
+        name:'Home',
+        redirect:'/',
+    },
+    {
+        path:'/inicio',
+        name:'Inicio2',
+        redirect:'/',
+    },
+    {
+        path:'/portada',
+        name:'Portada',
+        redirect:'/',
+    },
+    {
         path:'/sobremi',
         name: 'SobreMi',
         component: SobreMi,
