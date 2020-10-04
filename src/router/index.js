@@ -5,6 +5,7 @@ import SobreMi from '@/views/SobreMi.vue'
 import Contacto from '@/views/Contacto.vue'
 import Articulo from '@/views/Articulo.vue'
 import NotFound from '@/views/NotFound.vue'
+import Administrador from '@/views/Administrador.vue'
 import AdministradorSimple from '@/views/AdministradorSimple.vue'
 import AdministradorAvanzado from '@/views/AdministradorAvanzado.vue'
 
@@ -36,6 +37,11 @@ const routes =[
         path:'*',
         name:'NotFound',
         component: NotFound,
+    },
+    {
+        path:'/administrador',
+        name: 'Administrador',
+        component: Administrador,
     },
     {
         path:'/administrador/simple',
