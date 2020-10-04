@@ -37,11 +37,13 @@ const routes =[
         path:'/sobremi',
         name: 'SobreMi',
         component: SobreMi,
+        alias:['/acerca'],
     },
     {
         path:'/contacto',
         name:'Contacto',
         component: Contacto,
+        alias:['/contactame'],
     },
     {
         path:'/post/1',
